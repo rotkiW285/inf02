@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Odliczanie do wyników z egzaminu INF.02</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+<link rel="manifest" href="images/favicon/site.webmanifest">
+  </head>
+  <body>
+    <h1>Odliczanie do wyników z egzaminów INF.02</h1>
+    <p id="countdown"></p>
+    <img src="maxwell-cat.gif" alt="maxwell-cat">
+    <script>
+      // Set the date we're counting down to
+      var countDownDate = new Date("Aug 31, 2023 10:00:00").getTime();
+
+      // Update the count down every 1 second
+      var x = setInterval(function() {
+
+        // Get the current date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Display the result in the element with id="countdown"
+        document.getElementById("countdown").innerHTML = "Pozostało " + days + " dni " + hours + " godzin " + minutes + " minut " + seconds + " sekund ";
+
+        // If the count down is finished, write some text
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("countdown").innerHTML = "Czas minął!";
+        }
+      }, 1000);
+
+var audio = new Audio('seks.mp3');
+audio.loop = true;
+audio.play();
+window.addEventListener('load', playMusic);
+
+    </script>
+  </body>
+</html>

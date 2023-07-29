@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Odliczanie do wyników z egzaminu INF.02</title>
+    <title>Odliczanie do wyników z egzaminów INF.02</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
-<link rel="manifest" href="images/favicon/site.webmanifest">
+<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+<link rel="manifest" href="img/favicon/site.webmanifest">
   </head>
   <body>
     <h1>Odliczanie do wyników z egzaminów INF.02</h1>
     <p id="countdown"></p>
-    <img src="maxwell-cat.gif" alt="maxwell-cat">
+    <img src="img/maxwell-cat.gif" alt="maxwell-cat">
     <script>
       // Set the date we're counting down to
       var countDownDate = new Date("Aug 31, 2023 10:00:00").getTime();
@@ -39,15 +39,9 @@
         // If the count down is finished, write some text
         if (distance < 0) {
           clearInterval(x);
-          document.getElementById("countdown").innerHTML = "Czas minął!";
+          document.getElementById("countdown").innerHTML = "Wyniki zostały ogłoszone!";
         }
       }, 1000);
-
-var audio = new Audio('seks.mp3');
-audio.loop = true;
-audio.play();
-window.addEventListener('load', playMusic);
-
     </script>
   </body>
 </html>
